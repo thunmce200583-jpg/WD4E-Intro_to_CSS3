@@ -1,67 +1,80 @@
-/* Trang trí tổng thể */
+/* Tương phản chuẩn WAVE: Chữ xám đen đậm trên nền trắng, font Segoe UI hiện đại */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
-    color: #2d3748;
-}
-
-/* Header màu Tím Gradient sang trọng */
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
-    text-align: center;
-    padding: 50px 20px;
-    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.3rem;
-}
-
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-top: 10px;
-}
-
-/* Khung nội dung trắng nổi bật */
-main {
-    max-width: 800px;
-    margin: 35px auto;
-    padding: 30px;
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    color: #222222;
 }
 
-h2 {
-    color: #5a67d8;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 8px;
-    margin-top: 25px;
+/* ĐỀ BÀI: Định dạng liên kết "Skip to Main Content" ẩn/hiện khi Tab */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #1a202c;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: bold;
+    z-index: 999;
+    transition: top 0.2s ease;
 }
 
-ul {
-    padding-left: 20px;
+.skip-link:focus {
+    top: 10px;
 }
 
+/* ĐỀ BÀI: Nhận xét (comment out) kiểu dáng cũ của thẻ li */
+/*
 li {
-    margin-bottom: 12px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+*/
+
+/* ĐỀ BÀI: Định dạng nav dạng inline-block với chiều rộng 80% */
+nav {
+    display: inline-block;
+    width: 80%;
+    background-color: #e2e8f0;
+    padding: 12px;
+    border-radius: 4px;
 }
 
-strong {
-    color: #d69e2e; /* Điểm nhấn màu vàng cam */
+/* ĐỀ BÀI: Bộ chọn hậu duệ chỉ chỉnh hình ảnh TRONG nav rộng 10% */
+nav img {
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
 }
 
-/* Chân trang */
-footer {
-    text-align: center;
+/* ĐỀ BÀI: Lớp .grid - Lưới 2 cột (mỗi cột 40%) kết hợp justify-content, align-items, row-gap */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 25px;
+    margin: 25px 0;
+}
+
+/* ĐỀ BÀI: Bộ chọn hậu duệ chỉ chỉnh hình ảnh TRONG lớp grid rộng 100% (không ảnh hưởng lớp flex) */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ĐỀ BÀI: Lớp .flex - Sử dụng display: flex, flex-wrap và justify-content */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+main {
     padding: 20px;
-    background-color: #2d3748;
-    color: #a0aec0;
-    margin-top: 40px;
 }
